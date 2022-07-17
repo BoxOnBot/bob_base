@@ -2,7 +2,7 @@
 
 ## Workspace and dockerfiles for easy deployment and development of bob's base code.
 
-This repository contains the relevant dockerfiles, scripts for the development and deployment of Bob's base functionalities.
+This repository contains the relevant dockerfiles and scripts for the deployment of Bob's base functionalities.
 
 Bob's base functionalities include:
 
