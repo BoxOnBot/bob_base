@@ -1,6 +1,6 @@
 # Bob_base
 
-## Workspace and dockerfiles for easy deployment and development of bob's base code.
+## Dockerfiles for easy deployment of bob's base functionalities.
 
 This repository contains the relevant dockerfiles and scripts for the deployment of Bob's base functionalities.
 
