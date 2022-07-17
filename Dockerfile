@@ -24,9 +24,9 @@ RUN mkdir -p /bob_base_ws/src
 RUN cd /bob_base_ws && colcon build
 RUN . /bob_base_ws/install/local_setup.sh
 # Clone relevant repositories into the workspace and build
-RUN git clone -b master https://github.com/BoxOnBot/bob_description.git /bob_base_ws/src/bob_description
 RUN git clone -b master https://github.com/BoxOnBot/bob_base_bringup.git /bob_base_ws/src/bob_base_bringup
 RUN git clone -b fw-v0.5.3 https://github.com/BoxOnBot/odrive_ros2_control.git /bob_base_ws/src/odrive_ros2_control
+RUN git clone -b master https://github.com/BoxOnBot/bob_description.git /bob_base_ws/src/bob_description
 RUN cd /bob_base_ws && . /opt/ros/foxy/setup.sh && colcon build --symlink-install
 # Copy entrypoint script
 COPY ./ros_entrypoint.sh /
