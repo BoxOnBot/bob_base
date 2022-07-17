@@ -2,7 +2,7 @@
 
 ## Dockerfiles for easy deployment of bob's base functionalities.
 
-This repository contains the relevant dockerfiles and scripts for the deployment of Bob's base functionalities.
+This repository contains the relevant dockerfiles and scripts for the deployment of Bob's base functionalities. This readme also doubles as a summary of bob's base functionalities and their development status.
 
 Bob's base functionalities include:
 
