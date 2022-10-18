@@ -56,10 +56,12 @@ chmod +x run_bob_base_docker_container.sh
 ./run_bob_base_docker_container.sh
 ```
 
-## Relevant Published topics
+## Relevant Subscribed topics
 
 /diffbot_base_controller/cmd_vel_unstamped (`geometry_msgs/msg/Twist`)
     Used for teleoperation of bob
+
+## Relevant Published topics
 
 /odom (`nav_msgs/msg/Odometry`)
     Pre-fused odometry of bob

@@ -18,7 +18,9 @@ RUN apt-get install -y --allow-unauthenticated \
     python3-colcon-common-extensions \
     ros-foxy-rviz2 \
     ros-foxy-transmission-interface \
-    libusb-1.0-0-dev
+    libusb-1.0-0-dev \
+    ros-foxy-realsense2-camera \
+    ros-foxy-usb-cam
 # Create bob's workspace and source ros
 RUN mkdir -p /bob_base_ws/src
 RUN cd /bob_base_ws && colcon build
@@ -32,4 +34,4 @@ RUN cd /bob_base_ws && . /opt/ros/foxy/setup.sh && colcon build --symlink-instal
 COPY ./ros_entrypoint.sh /
 RUN chmod +x /ros_entrypoint.sh
 
-ENTRYPOINT ["/ros_entrypoint.sh"]
+# ENTRYPOINT ["/ros_entrypoint.sh"]
