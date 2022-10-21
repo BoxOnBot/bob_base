@@ -1,4 +1,4 @@
-FROM ros:foxy-ros-base-focal
+FROM --platform=linux/arm64/v8 ros:foxy-ros-base-focal
 # Configure environment so we do not get pesky CLI queries
 ENV TZ=Asia/Singapore
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timez
@@ -7,20 +7,20 @@ RUN apt-get update
 RUN apt-get -y upgrade
 # Install package dependancies
 RUN apt-get install -y --allow-unauthenticated \
-    apt-utils \
-    software-properties-common \
-    git \
-    python3-pip \
-    ros-foxy-angles \
-    ros-foxy-xacro \ 
-    ros-foxy-ros2-control \
-    ros-foxy-ros2-controllers \
-    python3-colcon-common-extensions \
-    ros-foxy-rviz2 \
-    ros-foxy-transmission-interface \
-    libusb-1.0-0-dev \
-    ros-foxy-realsense2-camera \
-    ros-foxy-usb-cam
+  apt-utils \
+  software-properties-common \
+  git \
+  python3-pip \
+  ros-foxy-angles \
+  ros-foxy-xacro \ 
+  ros-foxy-ros2-control \
+  ros-foxy-ros2-controllers \
+  python3-colcon-common-extensions \
+  ros-foxy-rviz2 \
+  ros-foxy-transmission-interface \
+  libusb-1.0-0-dev \
+  ros-foxy-realsense2-camera \
+  ros-foxy-usb-cam
 # Create bob's workspace and source ros
 RUN mkdir -p /bob_base_ws/src
 RUN cd /bob_base_ws && colcon build

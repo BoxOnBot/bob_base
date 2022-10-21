@@ -3,6 +3,7 @@
 xhost +
 
 docker run -it --rm \
+    --network="host" \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
     --privileged \
